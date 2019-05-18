@@ -38,7 +38,7 @@ class HttpRequestManager {
     
     
     //MARK:- GET Request1
-    func getRequestWithoutParams(endpointurl:String,responseData:@escaping (_ data:Dictionary<String, AnyObject>?,_ error:NSError?,_ message:String)  -> Void)
+    func getRequestWithoutParams(endpointurl:String,responseData:@escaping (_ data:Dictionary<String, AnyObject>?,_ error:NSError?,_ message:String?)  -> Void)
     {
         DLog( "URL : \(endpointurl)")
         ShowNetworkIndicator(xx: true)

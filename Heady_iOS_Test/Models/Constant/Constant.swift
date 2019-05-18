@@ -20,10 +20,9 @@ public let APP_VERSION: String = Bundle.main.infoDictionary!["CFBundleShortVersi
 
 //MARK:- Storyboard name
 public let storyboardMain :String = "Main"
-public let storyboardLogin :String = "Login"
 
 //MARK: VC ID
-public let viewCategoriesListVC = "idCategoriesListVC"
+public let viewCategoryVC = "idCategoryVC"
 
 
 //MARK:  Get VC for navigation
@@ -66,7 +65,12 @@ func showNoInternetMAlert()  {
     })
 }
 
+func showAlertWithTitleWithMessage(message:String)  {
+    DispatchQueue.main.async(execute: {
+        let _ = MONAlertController.alert(title: ALERT_NAME, message:message)
+    })
 
+}
 
 
 //MARK: - Color functions

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        NVActivityIndicatorView.DEFAULT_TEXT_COLOR = UIColor.white
+        NVActivityIndicatorView.DEFAULT_PADDING = CGFloat(0)
+        NVActivityIndicatorView.DEFAULT_COLOR = UIColor.white
+        NVActivityIndicatorView.DEFAULT_BLOCKER_BACKGROUND_COLOR = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
+        NVActivityIndicatorView.DEFAULT_BLOCKER_MINIMUM_DISPLAY_TIME = 0
+        NVActivityIndicatorView.DEFAULT_BLOCKER_MESSAGE_FONT = UIFont.systemFont(ofSize: 20)
+
         return true
     }
 

@@ -33,6 +33,7 @@ class DBManager {
         _ = try! Realm.performMigration()
 
         database = try! Realm()
+        DLog("\(Realm.Configuration.defaultConfiguration.fileURL!)")
     }
     
     

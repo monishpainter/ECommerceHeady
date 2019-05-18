@@ -9,12 +9,12 @@ import Foundation
 
 public enum WSRequestType : Int {
     
-    case Login
+    case GetCategories
 }
 
 struct WebServicePrefix {
     
-    static let Server_URL = ""
+    static let Server_URL = "https://stark-spire-93433.herokuapp.com"
     static let WS_PATH = "/"
     
     static func GetWSUrl(serviceType :WSRequestType) -> String
@@ -22,8 +22,8 @@ struct WebServicePrefix {
         var serviceURl: NSString?
         switch serviceType
         {
-        case .Login:
-            serviceURl = "login"
+        case .GetCategories:
+            serviceURl = "json"
             break
             
         }
